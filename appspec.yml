@@ -4,8 +4,10 @@ files:
  - source: index.html
    destination: /var/lib/tomcat8/webapps/myfirstapp/
 hooks:
-BeforeInstall:
+ApplicationStop:
  - location: scripts/before.sh
+BeforeInstall:
+ - location: scripts/check.sh
    timeout: 60
 AfterInstall:
  - location: scripts/after.sh
