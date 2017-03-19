@@ -5,7 +5,7 @@ files:
    destination: /var/lib/tomcat8/webapps/myfirstapp/
 hooks:
 BeforeInstall:
- - location: before.sh
+ - location: scripts/before.sh
    timeout: 60
 AfterInstall:
- - location: after.sh
+ - location: scripts/after.sh
