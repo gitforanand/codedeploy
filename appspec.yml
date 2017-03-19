@@ -1,0 +1,11 @@
+version: 0.0
+os: linux
+files:
+ - source: index.html
+   destination: /var/lib/tomcat8/webapps/myfirstapp/
+hooks:
+BeforeInstall:
+ - location: before.sh
+   timeout: 60
+AfterInstall:
+ - location: after.sh
